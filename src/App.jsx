@@ -1,9 +1,12 @@
 import './App.css';
+import Input from './components/Input';
+import Main from './components/Main';
 
 function App() {
   return (
     <div className="App">
-      <h1 className="logoText">Howeler</h1>
+      <Input/>
+      <Main/>
     </div>
   );
 }

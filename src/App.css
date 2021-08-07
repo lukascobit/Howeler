@@ -1,16 +1,19 @@
 :root{
-  --bg: rgb(56, 129, 177);
+  --bg: #3881b1;
   --wh: rgb(255, 255, 255);
 }
 
 body{
-  -webkit-text-stroke: 0.1vw black;
   background-color: var(--bg);
-  font-family: 'Work Sans', sans-serif;
+  font-family: sans-serif;
 }
 
 .logoText{
+  -webkit-text-stroke: 0.1vw black;
   color: var(--wh);
   font-size: 2vw;
   font-weight:900;
+}
+.signinButton{
+  cursor: pointer;
 }
