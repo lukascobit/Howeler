@@ -6,6 +6,7 @@
 body{
   background-color: var(--bg);
   font-family: sans-serif;
+  color: var(--wh);
 }
 
 .logoText{
@@ -16,4 +17,22 @@ body{
 }
 .signinButton{
   cursor: pointer;
+}
+.img{
+  width: 2.5vw;
+  height: 2.5vw;
+  float: left;
+  border-radius: 3vw;
+  border: 0.1vw black solid;
+}
+.username{
+  text-shadow: 0.1vw 0.1vw black;
+  margin: 3%;
+  padding: 0;
+}
+.profile{
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  width: 10vw;
 }
