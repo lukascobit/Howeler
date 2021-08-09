@@ -2,6 +2,8 @@
   --bg: #3881b1;
   --lightB: #609AC1;
   --wh: rgb(255, 255, 255);
+  --facebook: #4267B2;
+  --github: #161b22;
 }
 
 body{
@@ -15,9 +17,6 @@ body{
   color: var(--wh);
   font-size: 2vw;
   font-weight:900;
-}
-.signinButton{
-  cursor: pointer;
 }
 .img{
   width: 2.5vw;
@@ -59,7 +58,7 @@ body{
   cursor: pointer;
 }
 .signInButtons{
-  float: left;
+  float: right;
 }
 .no{
   display: none;
@@ -69,7 +68,7 @@ body{
   height: 3vw;
   float: left;
 }
-#postInput{
+.postInput{
   width: 30vw;
   height: 10vw;
   resize: none;
@@ -94,4 +93,35 @@ body{
   padding: 1vw;
   margin: 1vw;
   border-radius: 1vw;
+}
+.forget{
+  position:absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 1vw;
+  background-color: var(--lightB);
+  border: 0.1vw var(--wh) solid;
+  border-radius: 1vw;
+  cursor: pointer;
+
+}
+.signinB{
+  padding: 0.4vw;
+  font-size: 2vw;
+  margin: 1px;
+  border: 0.1vw var(--wh) solid;
+  border-radius: 1vw;
+  cursor: pointer;
+}
+
+.f{
+  background-color: var(--facebook);
+}
+.gi{
+  background-color: var(--github);
+  color: #f0f6fc;
+}
+.go{
+  background-color: black;
+  color: white;
 }

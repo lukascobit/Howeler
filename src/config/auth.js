@@ -12,6 +12,7 @@ const socialMediaAuth = (provider)=>{
         localStorage.setItem("username", user.bc.bc.displayName)
         localStorage.setItem("email", user.bc.bc.email)
         localStorage.setItem("imgURL", user.bc.bc.photoURL)
+        
 
     }).catch((err)=>{
 
