@@ -1,5 +1,6 @@
 :root{
   --bg: #3881b1;
+  --lightB: #609AC1;
   --wh: rgb(255, 255, 255);
 }
 
@@ -25,14 +26,72 @@ body{
   border-radius: 3vw;
   border: 0.1vw black solid;
 }
+.imgBig{
+  width: 5.5vw;
+  height: 5.5vw;
+  float: left;
+  border-radius: 3vw;
+  border: 0.2vw black solid;
+  margin: 0vw 1vw 0 0vw;
+}
 .username{
   text-shadow: 0.1vw 0.1vw black;
   margin: 3%;
   padding: 0;
+}
+.usernameBig{
+  font-size: 3vw;
+  text-shadow: 0.1vw 0.1vw black;
+  padding: 0;
+  margin: 0;
+}
+.email{
+  margin: 0;
+  padding: 0;
+  float: top;
+  color: #ffffffc4;
 }
 .profile{
   position: fixed;
   top: 1%;
   right: 1%;
   width: 10vw;
+  cursor: pointer;
+}
+.signInButtons{
+  float: left;
+}
+.no{
+  display: none;
+}
+.logo{
+  width: 3vw;
+  height: 3vw;
+  float: left;
+}
+#postInput{
+  width: 30vw;
+  height: 10vw;
+  resize: none;
+  font-family: sans-serif;
+}
+.sendButton{
+  background-color: var(--lightB);
+  width: 2.5vw;
+  height: 2.5vw;
+  font-size: 1.5vw;
+  border: 0.1vw var(--wh) solid;
+  border-radius: 1vw;
+  cursor: pointer;
+}
+.posts{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  padding: 0.1vw;
+}
+.postText{
+  background-color: turquoise;
+  padding: 1vw;
+  margin: 1vw;
+  border-radius: 1vw;
 }
