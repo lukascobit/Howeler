@@ -84,8 +84,11 @@ body{
   cursor: pointer;
 }
 .posts{
+  width: 100%;
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  overflow:hidden;
+  grid-template-columns: repeat(3, auto);
   padding: 0.1vw;
 }
 .postText{
@@ -93,6 +96,8 @@ body{
   padding: 1vw;
   margin: 1vw;
   border-radius: 1vw;
+  max-width: 39vw;
+  overflow-wrap: break-word;
 }
 .forget{
   position:absolute;
@@ -124,4 +129,11 @@ body{
 .go{
   background-color: black;
   color: white;
+}
+.warning{
+  background-color: #ff5900;
+  margin: 0;
+  width: 30vw;
+  padding: 0.3vw;
+  border-radius: 0.1vw;
 }

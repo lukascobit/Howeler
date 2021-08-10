@@ -12,7 +12,8 @@ function Main() {
     const [res, setRes] = useState(localStorage.getItem("signed") || false)
     const [body, setBody] = useState("");
     const [data, setData] = useState(null)
-    const [fullname, setFullname] = useState(localStorage.getItem("username") || null)
+    const [isLong, setIsLong] = useState(false)
+    const fullname = localStorage.getItem("username")
 
 
     const handleClick = async(provider) => {
@@ -60,6 +61,15 @@ function Main() {
         getTodos()
     },[])
 
+    function type(e){
+        if(e.target.value.length >= 254){
+            setIsLong(true)
+            return
+        }
+        setIsLong(false)
+        setBody(e.target.value)
+    }
+
     return (
         <div>
             <title>Howeler</title>
@@ -71,7 +81,7 @@ function Main() {
 
             <abbr title="Show your profile">
                 <div onClick={()=>window.location = "/profile"} className={res ? "profile" : "no"}>
-                    <img className="img" src={localStorage.getItem("imgURL")} alt="pfp"/>
+                    <img className="img" src={localStorage.getItem("imgURL") || logo} alt="pfp"/>
                     <h1 className="username">{localStorage.getItem("username")}</h1>
                 </div>
             </abbr>
@@ -81,7 +91,8 @@ function Main() {
         
             <form onSubmit={e => onSubmit(e)} className="post">
                 <h3>Your post: </h3>
-                <textarea className={res ? "postInput" : "no"} onChange={(e)=>setBody(e.target.value)} value={body} placeholder="type here..." type="text" />
+                <textarea className={res ? "postInput" : "no"} onChange={(e)=>type(e)} value={body} placeholder="type here..." type="text" />
+                <h1 className={isLong ? "warning" : "no"}>This message is too long, keep it short.</h1>
                 <button className="sendButton"><GrSend/></button>
             </form>
 
